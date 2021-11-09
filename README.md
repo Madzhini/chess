@@ -1,4 +1,4 @@
-URL Play: https://madzhini.github.io/chess/
+Demo: https://madzhini.github.io/chess/
 
 # chess
 
