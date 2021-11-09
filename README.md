@@ -1,7 +1,7 @@
-# chess
+# HTML5 Chess
 
 
-	HTML Chess (c) Copyright 2010 by Stefano Gioffré
+	HTML5 Chess (c) Copyright 2010 by Stefano Gioffré
 
 	http://sourceforge.net/projects/htmlchess/
 
