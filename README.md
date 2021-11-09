@@ -1,5 +1,3 @@
-Demo: https://madzhini.github.io/chess/
-
 # chess
 
 
