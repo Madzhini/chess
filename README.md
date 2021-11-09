@@ -1,3 +1,5 @@
+URL Play: https://madzhini.github.io/chess/
+
 # chess
 
 
