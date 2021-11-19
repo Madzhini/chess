@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+<title>Indian Chess App</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/chess.css">
+<link type="text/css" rel="stylesheet" href="css/gnomechess.css" />
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- PLAYGAME -->
+
+<script type="text/ecmascript" src="common/xhr.js"></script>
+<script type="text/ecmascript" src="common/chess.js"></script>
+
+<script type="text/javascript">
+var nVwPressed = false;
+function pressVwBtn(nBtnId) {
+	if (nVwPressed) { document.getElementById("viewBtn" + nVwPressed).className = ""; }
+	document.getElementById("viewBtn" + nBtnId).className = "pressedBtn";
+	nVwPressed = nBtnId;
+}
+
+// Firefox only
+function onPGNLoaded(frEvnt) {
+	var sFBody = frEvnt.target.result;
+	chess.readPGN(sFBody, document.chessCtrl3.plyerClr2[1].checked);
+}
+
+// Firefox only
+function loadPGNFile() {
+	var oFile = document.getElementById("PGNFileData").files[0];
+	if (oFile) {
+		var oFReader = new FileReader();
+		oFReader.onload = onPGNLoaded;
+		oFReader.readAsText(oFile);
+	}
+}
+
+function initChess() {
+	chess.useAI(document.chessCtrl1.useAI.checked);
+	chess.setPromotion(document.chessCtrl1.selPromo.selectedIndex);
+	chess.setFrameRate(Math.abs(Number(document.chessCtrl2.frameRateCtrl.value)) || 1000);
+	chess.setSide(document.chessCtrl2.selSide.selectedIndex);
+	chess.useKeyboard(document.chessCtrl2.KeybCtrl.checked);
+	chess.placeById("chessDesk");
+	document.chessCtrl1.plyDepthCtrl.value = "0";
+	chess.setView(1);
+	pressVwBtn(1);
+}
+</script>
+
+
+<style type="text/css">
+hr {
+	width: 30%;
+	margin-top: 32px;
+	margin-bottom: 24px;
+}
+
+img.tbBtn {
+	cursor: pointer;
+	margin: 1px 3px 1px 3px;
+}
+
+#pgnTable {
+	width: auto;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	border-collapse: collapse;
+	border: 0;
+}
+
+#pgnTable tr td { padding: 2px; }
+
+#chessDesk {
+	clear: both;
+	width: auto;
+	height: auto;
+	margin-top: 32px;
+	margin-bottom: 32px;
+}
+
+#chessToolBar {
+	width: 550px;
+	height: auto;
+	margin: 12px auto;
+	background-color: #969696;
+	border-bottom: 1px solid #424242;
+	text-align:center;
+	padding: 6px 3px 2px 3px;
+}
+
+#setViewBtns {
+	width: auto;
+	float: left;
+}
+
+#setViewBtns span {
+	margin: 0 3px;
+	display: inline-block;
+	font: 12px / 13px 'Noto Sans', sans-serif;
+	padding: 3px 6px;
+	border: 1px solid rgba(0, 0, 0, 0.6);
+	background-color: #969696;
+	cursor: default;
+	border-radius: 3px;
+}
+#setViewBtns span.pressedBtn {
+	background: #B5B5B5;
+</style>
+
+<!-- webstyle -->
+<style>
+body, html {
+    height: 100%;
+        width: 100%;
+    line-height: 1.8;
+}
+/* Full height image header */
+.bgimg-1 {
+    height: 100%;
+    width: 100%;
+}
+.w3-bar .w3-button {
+    padding: 16px;
+}
+
+#play {
+    height: 100%;
+    width: 10
+    }
+</style>
+
+
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: #ffffaa;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.form-font {
+	color: #CDBC9A;
+	 line-height: 250%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 15%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
+  }
+}
+
+</style>
+
+<body onload="initChess();" >
+
+<!-- Promo Section "PlayGame" -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+<div class="w3-container w3-row w3-center w3-gold w3-padding-64" id="play">
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content">
+  
+<div class="w3-row-padding form-font">
+
+      <form name="chessCtrl1" onsubmit="return(false);">
+			<p style="text-align:center;">&nbsp;<input id="useAIAsk" name="useAI" type="checkbox" onclick="chess.useAI(this.checked);" checked /> <label for="useAIAsk">Against machine</label> <br> Promotion to: <select onchange="chess.setPromotion(this.selectedIndex);" name="selPromo"><option>Queen</option><option>Rook</option><option>Bishop</option><option>Knight</option></select> <br> Player: <input type="radio" name="plyerClr1" id="white1" checked /> <label for="white1">white</label> or <input type="radio" name="plyerClr1" id="black1" /> <label for="black1">black</label> <br><br> <input type="button" name="strtBtn" value="Play Game" onclick="chess.organize(this.form.plyerClr1[1].checked);" /> <br> <br> Machine meditation level (press return to save): <input type="text" name="plyDepthCtrl" value="0" size="2" onkeypress=";if(event.keyCode===13&&chess.setPlyDepth(this.value)){alert('Ply depth setted.' + (Number(this.value) > 2 ? '\nAttention! The game could be very slow.' : ' Good game :)'));}" />&nbsp;</p>
+
+			<div >
+				<i class="fa fa-fast-backward fa-2x" onclick="chess.backToStart();" ></i>&nbsp;&nbsp;
+				<i class="fa fa-backward fa-2x" onclick="chess.navigate(-10, true);" ></i>&nbsp;&nbsp;
+				<i class="fa fa-play fa-rotate-180 fa-2x"  onclick="chess.navigate(-1, true);"></i>&nbsp;&nbsp;
+				<i class="fa fa-stop fa-2x" onclick="chess.stopMotion();"></i>&nbsp;&nbsp;
+				<i class="fa fa-play fa-2x" onclick="chess.navigate(1, true);" ></i>&nbsp;&nbsp;
+				<i class="fa fa-forward fa-2x" onclick="chess.navigate(10, true);" ></i>&nbsp;&nbsp;
+				<i class="fa fa-fast-forward fa-2x" onclick="chess.returnToEnd();" ></i>&nbsp;&nbsp;
+				<i class="fa fa-arrow-left fa-2x" onclick="chess.navigate(-1);" ></i>&nbsp;&nbsp;
+				<i class="fa fa-arrow-right fa-2x" onclick="chess.navigate(1);" ></i>&nbsp;&nbsp;
+				<i class="fa fa-question fa-2x" onclick="chess.help();" ></i>
+			</div>
+		</form>
+		<form name="chessCtrl2" onsubmit="return(false);">
+			<p style="text-align:center;">&nbsp;View side: <select onchange="chess.setSide(this.selectedIndex);" name="selSide"><option>White</option><option>Black</option><option selected>Human side</option></select> <br> <input id="useKeybAsk" name="KeybCtrl" type="checkbox" onclick="chess.useKeyboard(this.checked);" checked /> <label for="useKeybAsk">Enable keyboard</label> <br> Motion frame rate: <input type="text" name="frameRateCtrl" value="1000" size="5" onchange="var nMs=new Number(this.value);if(!isNaN(nMs)&&nMs>0){chess.setFrameRate(nMs);}" /> ms&nbsp;</p>
+		</form>
+
+    
+      </div>
+      </div>
+</div>
+
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Setting</span>
+
+<script>
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
+</script>
+
+
+      <div id="chessDesk"></div>
+
+  </div>
+</div>
+</header>
+
+ 
+<!-- Add Scripts -->
+
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+// Modal History
+function onClick(element) {
+  document.getElementById("img02").src = element.src;
+  document.getElementById("modal02").style.display = "block";
+  var captionText = document.getElementById("caption2");
+  captionText.innerHTML = element.alt;
+}
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+    } else {
+        mySidebar.style.display = 'block';
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>
+
