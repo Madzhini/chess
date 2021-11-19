@@ -1,7 +1,11 @@
 # HTML5 Chess
 
 
-	HTML5 Chess (c) Copyright 2010 by Stefano Gioffré
+	HTML5 Chess (c) Copyright 2020 by Riccardo Magini
+
+	http://madzhini.github.io/chess/
+
+	Developed on the base of HTML Chess (c) Copyright 2010 by Stefano Gioffré
 
 	http://sourceforge.net/projects/htmlchess/
 
