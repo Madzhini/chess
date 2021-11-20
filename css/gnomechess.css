@@ -14,7 +14,7 @@
 	font-size: 4em;;
 	line-height: 42px;
 	text-align: center;
-	font-family: 'Noto Sans', sans-serif;
+	font-family: 'Noto Sans', 'Noto Sans Symbols', sans-serif;
 }
 
 #flatChessboard tr td.blackSquares span, #flatChessboard tr td.whiteSquares span { cursor: pointer; }
@@ -48,6 +48,6 @@
 	overflow: visible;
 	background-color: #ce5c00;
 	color: #f9ac6d;
-	font-family: 'Noto Sans', sans-serif;
+	font-family: 'Noto Sans', 'Noto Sans Symbols', sans-serif;
 	font-size: 100%;
 }
