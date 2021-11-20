@@ -3,7 +3,7 @@
 
 	HTML5 Chess (c) Copyright 2020 by Riccardo Magini
 
-	http://madzhini.github.io/chess/
+	https://www.chessgame.it
 
 	Developed on the base of HTML Chess (c) Copyright 2010 by Stefano Gioffré
 
