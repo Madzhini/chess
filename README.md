@@ -1,4 +1,4 @@
-# ChessGame 
+# ChessGame.it 
 
 
 ChessGame (c) Copyright 2020 by Riccardo Magini
