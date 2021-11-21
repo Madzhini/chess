@@ -11,7 +11,7 @@
 #flatChessboard tr td.blackSquares, #flatChessboard tr td.whiteSquares {
 	width: 11%;
 	height: 11%;
-	font-size: 2.5em;;
+	font-size: 2.5em;
 	line-height: 42px;
 	text-align: center;
 	font-family: 'Noto Sans', 'ChessMedium', sans-serif;
