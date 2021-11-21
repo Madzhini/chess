@@ -61,4 +61,15 @@
 	text-align: center;
 	font-family: 'Noto Sans', 'ChessMedium', sans-serif;
 }
+	#flatChessboard { /* Table element */
+	/**
+	* margin-top: [DYNAMIC VALUE];
+	* margin-bottom: [DYNAMIC VALUE];
+	*/
+	margin-left: auto;
+	margin-right: auto;
+	border-collapse: collapse;
+	border: 0;
+		width: 100px;
+}
 }
