@@ -51,3 +51,13 @@
 	font-family: 'Noto Sans', 'ChessMedium', sans-serif;
 	font-size: 100%;
 }
+@media (max-width:768px){
+#flatChessboard tr td.blackSquares, #flatChessboard tr td.whiteSquares {
+	width: 11%;
+	height: 11%;
+	font-size: 1em;
+	line-height: 12px;
+	text-align: center;
+	font-family: 'Noto Sans', 'ChessMedium', sans-serif;
+}
+}
