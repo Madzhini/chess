@@ -61,11 +61,4 @@
 	text-align: center;
 	font-family: 'Noto Sans', 'ChessMedium', sans-serif;
 }
-#flatChessboard tr th, #flatChessboard tr td.boardAngle /*, #rightBorder, #bottomBorder */ {
-	overflow: visible;
-	background-color: #ce5c00;
-	color: #f9ac6d;
-	font-family: 'Noto Sans', 'ChessMedium', sans-serif;
-	font-size: 100px;
-}
 }
