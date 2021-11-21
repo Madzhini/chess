@@ -8,9 +8,9 @@ a.chessCtrlBtn:link, span.chessCtrlBtn {
 	-moz-user-select: none;
 	color: #000000;
 	cursor: default;
-	height: 18px;
+	height: 21px;
 	padding: 0 8px;
-	font: 0.6em; / 0.8em; "Noto Sans", ChessMedium, sans-serif;
+	font: 0.4em; / 0.6em; "Noto Sans", ChessMedium, sans-serif;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
