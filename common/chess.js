@@ -483,8 +483,6 @@ var chess = (function() {
 			oBoardTable.appendChild(gridBody);
 
 			oBoardTable.id = "flatChessboard";
-			oBoardTable.style.width = String(nFlatBoardSide) + "px";
-			oBoardTable.style.height = String(nFlatBoardSide) + "px";
 			etc.oFlatVwArea.appendChild(oBoardTable);
 			etc.bFlatView = true;
 		}
