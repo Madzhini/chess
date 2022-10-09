@@ -1,9 +1,9 @@
 # ChessGame.it 
 
 
-ChessGame (c) Copyright 2020 by Riccardo Magini
+ChessGame (c) Copyright 2020 by Madzhini
 
-Chess Boad Game: [ChessGame](https://rmagini.github.io/chess/)
+Chess Boad Game: [ChessGame](https://Madzhini.github.io/chess/)
 
 
 ![Screenshot](https://github.com/Madzhini/chess/blob/master/images/screenshot.png)
