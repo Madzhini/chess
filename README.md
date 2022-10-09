@@ -3,10 +3,10 @@
 
 ChessGame (c) Copyright 2020 by Madzhini
 
-Chess Boad Game: [ChessGame](https://Madzhini.github.io/chess/)
+Chess Boad Game: [ChessGame](https://madzhini.github.io/chess/)
 
 
-![Screenshot](https://github.com/Madzhini/chess/blob/master/images/screenshot.png)
+![Screenshot](https://github.com/madzhini/chess/blob/master/images/screenshot.png)
 
 	
 # Developed From
