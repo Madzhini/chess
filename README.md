@@ -3,7 +3,7 @@
 
 ChessGame (c) Copyright 2020 by Riccardo Magini
 
-Chess Boad Game: [https://www.chessgame.it](https://www.chessgame.it)
+Chess Boad Game: [https://rmagini.github.io/chess/](https://www.chessgame.it)
 
 
 ![Screenshot](https://github.com/Madzhini/chess/blob/master/images/screenshot.png)
