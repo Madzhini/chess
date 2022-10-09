@@ -1,6 +1,6 @@
-	ChessGame (c) Copyright 2020 by Riccardo Magini
+	ChessGame (c) Copyright 2020 by Madzhini
 
-	http://www.chessgame.it
+	https://madzhini.github.io/chess/
 	
 	- - -
 
