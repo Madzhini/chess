@@ -1,4 +1,4 @@
-# ChessGame.it 
+# Chess Game
 
 
 ChessGame (c) Copyright 2020 by Madzhini
